@@ -2,10 +2,13 @@ module.exports = {
   method: 'GET',
   path: '/',
   options: {
+    auth: {
+      strategy: 'session',
+      mode: 'optional'
+    },
     handler: (request, h) => {
       return h.view('home', {
-        title: 'Hello',
-        message: 'World'
+        credentials: request.auth.credentials
       })
     }
   }

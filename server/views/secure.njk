@@ -1,0 +1,43 @@
+{% extends 'layout.njk' %}
+
+{% from "date-input/macro.njk" import govukDateInput %}
+
+{% block content %}
+  <div class="govuk-body">
+    {% include "partials/user.njk" %}
+    <h1>Secure Area</h1>
+
+    {% for role in roles %}
+      <h3>Your role: {{ role }}</h3>
+    {% endfor %}
+
+    <table class="data">
+      <tr>
+        <th>Entry Header 1</th>
+        <th>Entry Header 2</th>
+        <th>Entry Header 3</th>
+        <th>Entry Header 4</th>
+      </tr>
+      <tr>
+        <td>Entry First Line 1</td>
+        <td>Entry First Line 2</td>
+        <td>Entry First Line 3</td>
+        <td>Entry First Line 4</td>
+      </tr>
+      <tr>
+        <td>Entry Line 1</td>
+        <td>Entry Line 2</td>
+        <td>Entry Line 3</td>
+        <td>Entry Line 4</td>
+      </tr>
+      <tr>
+        <td>Entry Last Line 1</td>
+        <td>Entry Last Line 2</td>
+        <td>Entry Last Line 3</td>
+        <td>Entry Last Line 4</td>
+      </tr>
+    </table>
+    {% if isAdmin %}<p><a href="#">Admin access to edit data</a></p>{% endif %}
+
+  </div>  
+{% endblock %}

@@ -14,9 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bell": "^9.3.1",
     "boom": "7.2.2",
     "govuk-frontend": "2.3.0",
     "hapi": "17.7.0",
+    "hapi-auth-cookie": "^9.0.0",
     "inert": "5.1.1",
     "joi": "14.0.4",
     "nunjucks": "3.1.3",

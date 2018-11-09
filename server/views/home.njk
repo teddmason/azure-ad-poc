@@ -4,25 +4,12 @@
 
 {% block content %}
   <div class="govuk-body">
-    {{
-      govukDateInput({
-        id: "dob",
-        namePrefix: "dob",
-        fieldset: {
-          legend: {
-            text: "What is your date of birth?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--xl"
-          }
-        },
-        hint: {
-          text: "For example, 31 3 1980"
-        }
-      })
-    }}
-
-
-    <p>{{title}}</p>
-    <p>{{message}}</p>
-  </div>
+    {% include "partials/user.njk" %}
+    <h1>Azure AD POC (for fwis rebuild)</h1>
+    {% if credentials %}
+      <p><a href="/secure">View secure area</a></p>
+      {% else %}
+      <p>Please <a href="/login">login</a> to view your options</p>
+    {% endif %}
+  </div>  
 {% endblock %}

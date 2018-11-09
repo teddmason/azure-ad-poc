@@ -36,8 +36,8 @@ module.exports = {
     context: {
       appVersion: pkg.version,
       assetPath: '/assets',
-      serviceName: 'Service name',
-      pageTitle: 'Service name - GOV.UK',
+      serviceName: 'Azure AD POC',
+      pageTitle: 'Azure AD POC',
       analyticsAccount: analyticsAccount
     }
   }

@@ -1,0 +1,8 @@
+<div>
+  {% if credentials %}
+    <p>Welcome {{credentials.profile.displayName}}</p>
+    <p><a href="/logout">Logout here</a></p>
+  {% else %}
+    Please <a href="login">login</a> to use the service
+  {% endif %}
+</div>
