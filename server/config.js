@@ -7,7 +7,8 @@ const schema = {
   adClientId: joi.string(),
   adClientSecret: joi.string(),
   adTenant: joi.string(),
-  cookiePassword: joi.string()
+  cookiePassword: joi.string(),
+  isSecure: joi.boolean()
 }
 
 // Build config
@@ -17,7 +18,8 @@ const config = {
   adClientId: process.env.AD_CLIENT_ID,
   adClientSecret: process.env.AD_CLIENT_SECRET,
   adTenant: process.env.AD_TENANT,
-  cookiePassword: process.env.AD_COOKIE_PASSWORD
+  cookiePassword: process.env.AD_COOKIE_PASSWORD,
+  isSecure: process.env.IS_SECURE
 }
 
 // Validate config

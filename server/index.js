@@ -24,7 +24,7 @@ async function createServer () {
     password: config.cookiePassword,
     clientId: config.adClientId,
     clientSecret: config.adClientSecret,
-    isSecure: (process.env.NODE_ENV === 'production'),
+    isSecure: config.isSecure,
     config: {
       tenant: config.adTenant
     }
@@ -32,7 +32,7 @@ async function createServer () {
 
   server.auth.strategy('session', 'cookie', {
     password: config.cookiePassword,
-    isSecure: (process.env.NODE_ENV === 'production')
+    isSecure: config.isSecure
   })
 
   await server.register(require('./plugins/views'))
