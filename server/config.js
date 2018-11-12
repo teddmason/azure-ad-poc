@@ -43,6 +43,4 @@ const value = result.value
 value.isDev = value.env === 'development'
 value.isProd = value.env === 'production'
 
-console.log(value)
-
 module.exports = value
