@@ -8,7 +8,8 @@ const schema = {
   adClientSecret: joi.string(),
   adTenant: joi.string(),
   cookiePassword: joi.string(),
-  isSecure: joi.boolean()
+  isSecure: joi.boolean().default(false),
+  forceHttps: joi.boolean().default(false)
 }
 
 // Build config
@@ -19,7 +20,8 @@ const config = {
   adClientSecret: process.env.AD_CLIENT_SECRET,
   adTenant: process.env.AD_TENANT,
   cookiePassword: process.env.AD_COOKIE_PASSWORD,
-  isSecure: process.env.IS_SECURE
+  isSecure: process.env.IS_SECURE,
+  forceHttps: process.env.FORCE_HTTPS
 }
 
 // Validate config
@@ -38,5 +40,7 @@ const value = result.value
 // Add some helper props
 value.isDev = value.env === 'development'
 value.isProd = value.env === 'production'
+
+console.log(value)
 
 module.exports = value

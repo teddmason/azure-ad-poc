@@ -25,6 +25,7 @@ async function createServer () {
     clientId: config.adClientId,
     clientSecret: config.adClientSecret,
     isSecure: config.isSecure,
+    forceHttps: config.forceHttps,
     config: {
       tenant: config.adTenant
     }
