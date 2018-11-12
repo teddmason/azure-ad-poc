@@ -9,7 +9,8 @@ const schema = {
   adTenant: joi.string(),
   cookiePassword: joi.string(),
   isSecure: joi.boolean().default(false),
-  forceHttps: joi.boolean().default(false)
+  forceHttps: joi.boolean().default(false),
+  homePage: joi.string().default('http://localhost:3000')
 }
 
 // Build config
@@ -21,7 +22,8 @@ const config = {
   adTenant: process.env.AD_TENANT,
   cookiePassword: process.env.AD_COOKIE_PASSWORD,
   isSecure: process.env.IS_SECURE,
-  forceHttps: process.env.FORCE_HTTPS
+  forceHttps: process.env.FORCE_HTTPS,
+  homePage: process.env.HOME_PAGE
 }
 
 // Validate config
